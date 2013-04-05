@@ -1,0 +1,128 @@
+/*	Styles for "Screen" Media
+*	File: main.css
+*	Author: Stephen Davis
+*	Auth Web: http://stephendavis.im
+*	modified: 2011-08-19
+*/
+
+@import url('reset.css');
+
+/** All Styles
+-------------------------- **/
+html {
+	font-size: 62.5%; /* about 10px if browser size is set at default (16px) */
+	font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+	color: #333;
+}
+body { font-size: 1.6em; }
+div#wrap {
+	max-width: 920px;
+	min-width: 380px;
+	margin: 80px auto;
+}
+div#aside {
+	float: left;
+	width: 190px;
+}
+div#content { padding-left: 230px; }
+
+h1, h2, h4 { color: #09c; }
+a {
+	color: #000;
+	text-decoration: underline;
+}
+a > span {
+	text-decoration: underline;
+	color: #FFF;
+}
+a span span { color: #000; } /*crappy, but the easiest way to remove the underline from below the arrow*/
+	a:hover, a:focus {
+/*		text-decoration: none;*/
+		color: #09c;
+	}
+p {
+	color: #666;
+	line-height: 1.2em;
+}
+	p.dark { color: #000; }
+	p.blurb {
+/*		padding-left: 2em;*/
+		font-style: italic;
+		font-size: 0.9em;
+	}
+div#aside p { padding-bottom: 15px; }
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.25em;
+	font-weight: normal;
+}
+h1 {
+	padding-top: 25px;
+	font-size: 2.3em;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-bottom: 60px;
+}
+h2 {
+	padding-top: 30px;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+h3 {
+	font-size: 1em;
+	font-weight: bold;
+	padding-top: 15px;
+}
+h3 span {
+	display: block;
+	font-weight: normal;
+}
+	h2+h3,
+	h2+div>h3,
+	.ref h3 { padding-top: 0; }
+.job h3 span {
+	display: inline;
+}
+.job {
+	margin: 10px 0;
+}
+h4 {
+	font-size: 1em;
+	text-transform: lowercase;
+}
+blockquote {
+	font-style: italic;
+	font-size: 0.9em;
+	color: #666;
+	padding: 10px 20px 0 40px;
+}
+	blockquote span {
+		padding-left: 20px;
+		display: block;
+	}
+.ref {
+	float: left;
+	width: 25%;
+}
+ul {
+	margin-left: 2em;
+	list-style: disc;
+	top: 5px 0;
+	line-height: 1.25em;
+}
+
+/** Misc
+-------------------------- **/
+.fl { clear: both; }
+.clearfix:after {
+	content: "";
+	display: block; 
+	height: 100%;
+	clear: both;
+	visibility: hidden;
+}
+
+/** For PDF Conversion
+-------------------------- **/
+p { font-weight: normal; }
+/*.ref { width: 24%; }*/
+div#aside p.vcard { display: none; }
