@@ -2,11 +2,11 @@ BEGIN:VCARD
 VERSION:3.0
 N:Davis;Stephen;;;
 FN:Stephen Davis
-ORG:Xenon Design Studios - Developer & Strategist;
+ORG:J4 Studios - Lead Developer;
 EMAIL;type=INTERNET;type=HOME;type=pref:stephendavis89@gmail.com
 EMAIL;type=INTERNET;type=WORK:hello@stephendavis.im
 TEL;type=CELL;type=pref:864.735.7394
-item1.ADR;type=HOME;type=pref:;;103 Fillery Dr;Greenville;SC;29615;USA
+item1.ADR;type=HOME;type=pref:;;117 Bennett St Apt C;Greenville;SC;29601;USA
 item1.X-ABADR:us
 URL;type=WORK;type=pref:http\://stephendavis.im
 BDAY;value=date:1989-11-30

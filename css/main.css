@@ -1,128 +1,80 @@
-/*	Styles for "Screen" Media
-*	File: main.css
-*	Author: Stephen Davis
-*	Auth Web: http://stephendavis.im
-*	modified: 2011-08-19
-*/
-
-@import url('reset.css');
-
-/** All Styles
--------------------------- **/
-html {
-	font-size: 62.5%; /* about 10px if browser size is set at default (16px) */
-	font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
-	color: #333;
+/* General
+-------------------------- */
+::-moz-selection { background: rgba(237,52,49,.7); color: #FFF; text-shadow: none; }
+::selection { background: rgba(237,52,49,.7); color: #FFF; text-shadow: none; }
+body {
+  font-family: "Lato", Helvetica, Arial, Geneva, sans-serif;
+  text-rendering: optimizelegibility;
+  line-height: 1.5;
+  color: #444;
 }
-body { font-size: 1.6em; }
-div#wrap {
-	max-width: 920px;
-	min-width: 380px;
-	margin: 80px auto;
-}
-div#aside {
-	float: left;
-	width: 190px;
-}
-div#content { padding-left: 230px; }
-
-h1, h2, h4 { color: #09c; }
-a {
-	color: #000;
-	text-decoration: underline;
-}
-a > span {
-	text-decoration: underline;
-	color: #FFF;
-}
-a span span { color: #000; } /*crappy, but the easiest way to remove the underline from below the arrow*/
-	a:hover, a:focus {
-/*		text-decoration: none;*/
-		color: #09c;
-	}
-p {
-	color: #666;
-	line-height: 1.2em;
-}
-	p.dark { color: #000; }
-	p.blurb {
-/*		padding-left: 2em;*/
-		font-style: italic;
-		font-size: 0.9em;
-	}
-div#aside p { padding-bottom: 15px; }
-h1, h2, h3, h4, h5, h6 {
-	line-height: 1.25em;
-	font-weight: normal;
-}
+h1, h2, h3, h4 { line-height: 1.2; }
+h1, h2, h4 { color: #ED3431; }
 h1 {
-	padding-top: 25px;
-	font-size: 2.3em;
-	font-weight: bold;
-	text-transform: uppercase;
-	padding-bottom: 60px;
+  font-size: 2.3em;
+  text-transform: uppercase;
+  margin: 0 0 1em;
 }
-h2 {
-	padding-top: 30px;
-	font-size: 1.3em;
-	font-weight: bold;
-}
+h2:first-child { margin-top: 0; }
+h3, h4 { margin: 0; }
 h3 {
-	font-size: 1em;
-	font-weight: bold;
-	padding-top: 15px;
+  font-size: 1em;
+  font-weight: bold;
 }
-h3 span {
-	display: block;
-	font-weight: normal;
+h3 span { font-weight: normal; }
+h4 { text-transform: lowercase; }
+a {
+  color: #000;
+  text-decoration: underline;
+  transition: color 0.1s linear;
 }
-	h2+h3,
-	h2+div>h3,
-	.ref h3 { padding-top: 0; }
-.job h3 span {
-	display: inline;
+a:hover { color: #ED3431; }
+a.vcard { text-decoration: none; }
+a.vcard span { text-decoration: underline; }
+a.vcard:after {
+  content: " \21AF";
+  text-decoration: none;
 }
-.job {
-	margin: 10px 0;
+h3 + ul,
+h3 + p,
+h4 + p { margin-top: 0.3em; }
+p.highlight { color: #000; }
+p.blurb {
+  color: #777;
+  font-size: 0.9em;
+  font-style: italic;
 }
-h4 {
-	font-size: 1em;
-	text-transform: lowercase;
-}
-blockquote {
-	font-style: italic;
-	font-size: 0.9em;
-	color: #666;
-	padding: 10px 20px 0 40px;
-}
-	blockquote span {
-		padding-left: 20px;
-		display: block;
-	}
-.ref {
-	float: left;
-	width: 25%;
-}
-ul {
-	margin-left: 2em;
-	list-style: disc;
-	top: 5px 0;
-	line-height: 1.25em;
-}
+.job { margin-bottom: 2em; }
 
-/** Misc
--------------------------- **/
-.fl { clear: both; }
-.clearfix:after {
-	content: "";
-	display: block; 
-	height: 100%;
-	clear: both;
-	visibility: hidden;
+/* Layout
+-------------------------- */
+.wrapper {
+  max-width: 960px;
+  padding: 0 1em;
+  margin: 4em auto;
+  overflow: auto;
 }
+.primary {
+  float: right;
+  width: 75%;
+}
+.secondary {
+  float: left;
+  width: 25%;
+}
+.secondary:last-child { margin-top: 2em; }
 
-/** For PDF Conversion
--------------------------- **/
-p { font-weight: normal; }
-/*.ref { width: 24%; }*/
-div#aside p.vcard { display: none; }
+/* Media queries
+-------------------------- */
+@media only screen and (max-width: 44em) {
+  h1 { text-align: center; }
+  .primary,
+  .secondary {
+    float: none;
+    width: auto;
+  }
+  .secondary:last-child {
+    border-top: 2px solid #ED3431;
+    padding-top: 2em;
+  }
+}
