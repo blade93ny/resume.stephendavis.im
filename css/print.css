@@ -1,0 +1,16 @@
+body {
+  line-height: 1.3em;
+  font-size: 80%;
+}
+.wrapper { margin: 2em auto; }
+h1, h2, h4 { color: #D00; }
+h1 { font-size: 2em; }
+h2 {
+  font-size: 1.3em;
+  margin: 0.3em 0;
+}
+h2:nth-child(4n) { margin-top: 285px; }
+p, ul { margin: 0.8em 0; }
+.secondary { width: 20%; }
+.job { margin-bottom: 1.6em; }
+a.vcard { display: none; }
