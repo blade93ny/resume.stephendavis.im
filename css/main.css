@@ -52,7 +52,6 @@ p.blurb {
   max-width: 960px;
   padding: 0 1em;
   margin: 4em auto;
-  overflow: auto;
 }
 .primary {
   float: right;
