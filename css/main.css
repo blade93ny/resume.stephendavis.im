@@ -29,6 +29,12 @@ a {
   transition: color 0.1s linear;
 }
 a:hover { color: #ED3431; }
+a.pdf { text-decoration: none; }
+a.pdf span { text-decoration: underline; }
+a.pdf:after {
+  content: " \2193";
+  text-decoration: none;
+}
 h3 + ul,
 h3 + p,
 h4 + p { margin-top: 0.3em; }
