@@ -29,12 +29,6 @@ a {
   transition: color 0.1s linear;
 }
 a:hover { color: #ED3431; }
-a.vcard { text-decoration: none; }
-a.vcard span { text-decoration: underline; }
-a.vcard:after {
-  content: " \21AF";
-  text-decoration: none;
-}
 h3 + ul,
 h3 + p,
 h4 + p { margin-top: 0.3em; }
